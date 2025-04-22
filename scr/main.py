@@ -447,7 +447,7 @@ async def get_signal(timestamp: str, request: Request):
     try:
         logger.info(f"Signal request from {request.client.host} for timestamp: {timestamp}")
         # Decode URL-encoded timestamp
-        decoded_timestamp = unquote(timestamp)
+        decoded_timestamp =  unquote(timestamp)
         
         # Get signal data
         signal_data = get_signal_by_timestamp(decoded_timestamp)
